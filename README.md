@@ -90,16 +90,6 @@ both use disk. we store the answer, not the ingredients.
 
 pure rust. every decision made for speed.
 
-- **mimalloc** — global allocator, 2-3x faster allocation
-- **tokio multi-thread** — all cpu cores, each running a kqueue event loop
-- **SO_REUSEPORT** — one listener per core, kernel spreads connections with zero lock contention
-- **moka** — sharded concurrent LRU, aHash/AES hardware hashing, zero-lock hot path
-- **sonic-rs** — SIMD JSON parsing via NEON on apple silicon, cold path only
-- **bytes::Bytes** — zero-copy arc, cache hit = one atomic refcount increment
-- **reqwest** — 128 idle connections to helius, rustls, tcp keepalive — cold miss skips handshake
-- **redb** — pure-rust embedded B-tree, L2 persistence across restarts
-- **LTO fat + codegen-units=1** — whole-program optimization, max inlining
-
 ---
 
 ## try it yourself
